@@ -1,0 +1,637 @@
+verbose: 1
+boundaryDisplacement_scaling: linear
+defmech:
+    irrevthres: 0.
+    timestepping:
+        type: quasistatic
+heatxfer:
+    timestepping:
+        type: null
+temperature:
+    offset: 0
+time:
+    min: 0
+    max: 1
+    numstep: 100
+cs0001:
+    fracturetoughness:    0.1000000000
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    1.0000000000
+        vsd_poissonratio:  0.3
+cs0002:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.3453052090
+        vsd_poissonratio:     0.0010000000
+cs0003:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.2935558316
+        vsd_poissonratio:     0.0010000000
+cs0004:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.2488275754
+        vsd_poissonratio:     0.0010000000
+cs0005:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.2102875493
+        vsd_poissonratio:     0.0010000000
+cs0006:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.1771868840
+        vsd_poissonratio:     0.0010000000
+cs0007:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.1488538099
+        vsd_poissonratio:     0.0010000000
+cs0008:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.1246871708
+        vsd_poissonratio:     0.0010000000
+cs0009:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.1041503564
+        vsd_poissonratio:     0.0010000000
+cs0010:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0867656343
+        vsd_poissonratio:     0.0010000000
+cs0011:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0721088640
+        vsd_poissonratio:     0.0010000000
+cs0012:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0598045748
+        vsd_poissonratio:     0.0010000000
+cs0013:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0495213915
+        vsd_poissonratio:     0.0010000000
+cs0014:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0409677896
+        vsd_poissonratio:     0.0010000000
+cs0015:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0338881655
+        vsd_poissonratio:     0.0010000000
+cs0016:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0280592040
+        vsd_poissonratio:     0.0010000000
+cs0017:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0232865296
+        vsd_poissonratio:     0.0010000000
+cs0018:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0194016243
+        vsd_poissonratio:     0.0010000000
+cs0019:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0162589991
+        vsd_poissonratio:     0.0010000000
+cs0020:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0137336042
+        vsd_poissonratio:     0.0010000000
+cs0021:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0117184640
+        vsd_poissonratio:     0.0010000000
+cs0022:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0101225233
+        vsd_poissonratio:     0.0010000000
+cs0023:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0088686925
+        vsd_poissonratio:     0.0010000000
+cs0024:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0078920785
+        vsd_poissonratio:     0.0010000000
+cs0025:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0071383891
+        vsd_poissonratio:     0.0010000000
+cs0026:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0065625000
+        vsd_poissonratio:     0.0010000000
+cs0027:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0061271712
+        vsd_poissonratio:     0.0010000000
+cs0028:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0058019045
+        vsd_poissonratio:     0.0010000000
+cs0029:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0055619289
+        vsd_poissonratio:     0.0010000000
+cs0030:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0053873061
+        vsd_poissonratio:     0.0010000000
+cs0031:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0052621440
+        vsd_poissonratio:     0.0010000000
+cs0032:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0051739117
+        vsd_poissonratio:     0.0010000000
+cs0033:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0051128444
+        vsd_poissonratio:     0.0010000000
+cs0034:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050714318
+        vsd_poissonratio:     0.0010000000
+cs0035:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050439805
+        vsd_poissonratio:     0.0010000000
+cs0036:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050262440
+        vsd_poissonratio:     0.0010000000
+cs0037:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050151121
+        vsd_poissonratio:     0.0010000000
+cs0038:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050083531
+        vsd_poissonratio:     0.0010000000
+cs0039:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050044030
+        vsd_poissonratio:     0.0010000000
+cs0040:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050021950
+        vsd_poissonratio:     0.0010000000
+cs0041:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050010240
+        vsd_poissonratio:     0.0010000000
+cs0042:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050004408
+        vsd_poissonratio:     0.0010000000
+cs0043:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050001718
+        vsd_poissonratio:     0.0010000000
+cs0044:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000590
+        vsd_poissonratio:     0.0010000000
+cs0045:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000172
+        vsd_poissonratio:     0.0010000000
+cs0046:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000040
+        vsd_poissonratio:     0.0010000000
+cs0047:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000007
+        vsd_poissonratio:     0.0010000000
+cs0048:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000001
+        vsd_poissonratio:     0.0010000000
+cs0049:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000000
+        vsd_poissonratio:     0.0010000000
+cs0050:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000000
+        vsd_poissonratio:     0.0010000000
+cs0051:
+    fracturetoughness: 100.0
+    residualstiffness: 1e-6
+    internalLength: 2.0
+    damage:
+        type: AT1
+    plasticity:
+        type: NONE
+    HookesLaw:
+        type: isotropic
+        YoungsModulus:    0.0050000000
+        vsd_poissonratio:     0.0010000000
+vs0001:
+    displacementbc: yes,yes,no
+    boundaryDisplacement: 0,-40.0000,0
+    damageBC: yes
+    boundaryDamage: 0.
+vs0002:
+    displacementbc: yes,yes,no
+    boundaryDisplacement: 0,40.00000,0
+    damageBC: yes
+    boundaryDamage: 0.
