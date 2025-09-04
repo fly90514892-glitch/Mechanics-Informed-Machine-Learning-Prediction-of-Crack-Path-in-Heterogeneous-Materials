@@ -1,0 +1,1 @@
+dp.yaml: Input file for running FEM simulations using FEM90 to generate the ground-truth crack path in the porous domain (domain located in the porous_medium/FEM directory).
