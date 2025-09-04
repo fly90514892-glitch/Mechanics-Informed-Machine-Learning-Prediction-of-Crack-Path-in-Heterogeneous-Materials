@@ -1,1 +1,1 @@
-1.gen: 1 represents 1% porosity.
+Each file is named as X.gen, where X is the porosity percentage (e.g., 10 = 10%).
