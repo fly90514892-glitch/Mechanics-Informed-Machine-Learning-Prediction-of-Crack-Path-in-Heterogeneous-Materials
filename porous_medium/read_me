@@ -1,1 +1,1 @@
-FEM folder contains files for ground-truth FEM results, ML folder holds datasets used for Transformer-based predictions.
+The FEM folder contains domain files for ground-truth FEM simulations, while the ML folder holds domain datasets used for Transformer-based predictions.
