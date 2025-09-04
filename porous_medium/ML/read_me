@@ -1,1 +1,1 @@
-
+Each file is named as mapX_Y.txt, where X is the timestep (e.g., 0 = initial) and Y is the porosity percentage (e.g., 10 = 10%).
