@@ -1,6 +1,1 @@
-It includes a dataset of 631 cases with two-pore combinations and a dataset of 7176 cases with three-pore combinations.
-
-Example:
-Input matrix: 8_map0.txt
-Output matrix: 8_map1.txt
-8 is the case number.
+Contains datasets of two- and three-pore combinations in material microstructures. `631cases.zip` includes 631 two-pore cases, and `7176cases.zip` includes 7176 three-pore cases. Example input/output: `8_map0.txt` → `8_map1.txt`.
