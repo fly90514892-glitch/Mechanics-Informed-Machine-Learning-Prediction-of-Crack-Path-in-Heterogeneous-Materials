@@ -1,2 +1,2 @@
-transformer_model_631cases.zip: Trained model using 631 datasets (datasets located in FEM-generated_training_datasets/631cases.zip).
-transformer_model_7176cases.zip: Trained model using 7176 datasets (datasets located in FEM-generated_training_datasets/7176cases.zip).
+transformer_model_631cases: Trained model using 631 datasets (datasets located in FEM-generated_training_datasets/631cases.zip).
+transformer_model_7176cases: Trained model using 7176 datasets (datasets located in FEM-generated_training_datasets/7176cases.zip).
