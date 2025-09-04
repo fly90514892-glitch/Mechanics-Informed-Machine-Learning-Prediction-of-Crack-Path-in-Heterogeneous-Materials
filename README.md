@@ -1,6 +1,8 @@
 # Mechanics-Informed-Machine-Learning-Prediction-of-Crack-Path-in-Heterogeneous-Materials
 Mechanics-informed ML framework for predicting crack paths in porous media. Combines FEM data with a Transformer model using physics-guided domain extraction and VSBC for stable training. Provides fast, accurate, and generalizable alternatives to costly FEM simulations.
 
+## Repository Structure (For detailed information, please read the read_me file for each subdirectory)
+
 # FEM-generated_training_datasets/
 Contains the FEM simulation datasets used for training the Transformer models.  
 - `631cases.zip` → 631 cases with **two-pore** combinations.  
