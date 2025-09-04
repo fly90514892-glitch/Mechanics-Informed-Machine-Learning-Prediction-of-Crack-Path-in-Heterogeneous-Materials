@@ -1,2 +1,3 @@
-train.py: The Python code used for the transformer-based training on spatiotemporal dataset (under The FEM-generated training datasets directory) for the machine learning-related calculations.
-predict.py: The Python code used for the predxict the crack path for porous midel (under )
+train.py: Python script for transformer-based training on the spatiotemporal datasets (located under FEM-generated_training_datasets) for machine learning tasks.
+
+predict.py: Python script to predict crack paths in porous materials (located under porous_medium/ML directory)
