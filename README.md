@@ -43,15 +43,15 @@ This file.
 
 1. Install **MEF90** (https://github.com/bourdin/mef90).  
 2. Prepare the following input files inside the directory:  
-   - `dp.yaml` → Input file that defines the FEM setup and parameters.  
-   - Input domain file (`*.gen`).
+   - `FE_code/dp.yaml` → Input file that defines the FEM setup and parameters.  
+   - Input domain file (`porous_medium/FEM/*.gen`).
      
 ## Running the Machine Learning Code
 
 The ML workflow uses TensorFlow/Keras to train and apply a Transformer model for predicting crack paths from FEM-generated datasets.
 
-1. Run `train.py` with the datasets provided in the `FEM-generated_training_datasets` directory to train the machine learning model.
-2. Use the trained model in the `Trained_Model` directory and the porous domain in `porous_medium/ML`, then run `prepare.qsub` to predict crack paths for the porous domain.
+1. Run `ML_code/train/train.py` with the datasets provided in the `FEM-generated_training_datasets` directory to train the machine learning model.
+2. Use the trained model in the `Trained_Model` directory and the porous domain in `porous_medium/ML`, then run `ML_code/predict/prepare.qsub` to predict crack paths for the porous domain.
 
    
 
