@@ -1,0 +1,31 @@
+#!/bin/bash -l
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --job-name=prepare
+#SBATCH --partition=standard
+#          d-hh:mm:ss
+#SBATCH --time=6-00:00:00
+#SBATCH --output=prepare.out
+#
+#SBATCH --export=NONE
+#
+
+#
+#
+z=$(head file.txt)
+((x=z+1))
+cp ref_find_crack_tip.m find_crack_tip.m
+cp ref_combine_predict.m combine_predict.m
+cp ref_predict.py predict.py
+
+sed -i s/'zzz'/"$z"/g find_crack_tip.m
+sed -i s/'zzz'/"$z"/g combine_predict.m
+sed -i s/'zzz'/"$z"/g  predict.py
+sed -i s/'xxx'/"$x"/g  predict.py
+
+if [ "$z" -gt 200]; then
+    echo "z is greater than 200. Killing the job."
+else
+    sbatch find_crack_tip.qsub
+    echo "$x" > file.txt
+fi

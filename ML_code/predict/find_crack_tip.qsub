@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=5G
+#SBATCH --job-name=findcracktip
+#SBATCH --partition=standard
+#SBATCH --time=7-00:00:00
+#SBATCH --output=find_crack_tip.out
+sbatch --dependency=$(squeue --noheader --format %i --name findcracktip) predict.qsub
+
+vpkg_require matlab/r2022a
+matlab -nodesktop -nosplash -r 'find_crack_tip'
+
