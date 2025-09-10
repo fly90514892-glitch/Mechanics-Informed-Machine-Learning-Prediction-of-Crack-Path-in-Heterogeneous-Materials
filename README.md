@@ -18,8 +18,8 @@ Contains scripts and configuration files for running FEM simulations with MEF90.
 
 # ML_code/
 Contains the machine learning training and prediction scripts.  
-- `train.py`: Transformer-based training on spatiotemporal FEM datasets.  
-- `predict.py`: Predicts crack paths in porous materials using trained ML models.  
+- train/: Transformer-based training on spatiotemporal FEM datasets.  
+- predict/: Predicts crack paths in porous materials using trained ML models.  
 
 # Trained_Model/
 Contains trained Transformer models.  
@@ -51,7 +51,8 @@ This file.
 The ML workflow uses TensorFlow/Keras to train and apply a Transformer model for predicting crack paths from FEM-generated datasets.
 
 1. Run `train.py` with the datasets provided in the `FEM-generated_training_datasets` directory to train the machine learning model.
-2. Use the trained model with `predict.py` to predict crack paths for porous domains located in the `porous_medium/ML` directory.
+2. Use the trained model in the `Trained_Model` directory and the porous domain in `porous_medium/ML`, then run `prepare.qsub` to predict crack paths for the porous domain.
+
    
 
 
