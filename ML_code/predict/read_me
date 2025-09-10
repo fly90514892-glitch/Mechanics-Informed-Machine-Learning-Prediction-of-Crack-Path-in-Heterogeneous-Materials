@@ -10,7 +10,7 @@ MATLAB code used for crack-tip detection. This script extracts localized domains
 predict.qsub
 Runs predict.py for ML prediction tasks.
 
-predict.py
+ref_predict.py
 Python script for the trained Transformer model predicts crack propagation in localized sub-domains.
 
 combine_predict.qsub
