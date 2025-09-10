@@ -1,3 +1,0 @@
-train.py: Python script for transformer-based training on the spatiotemporal datasets (datasets located under FEM-generated_training_datasets directory) for machine learning tasks.
-
-predict.py: Python script to predict crack paths in porous domains (domains located under porous_medium/ML directory).
