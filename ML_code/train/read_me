@@ -1,0 +1,1 @@
+train.py: Python script for transformer-based training on the spatiotemporal datasets (datasets located under FEM-generated_training_datasets directory) for machine learning tasks.
