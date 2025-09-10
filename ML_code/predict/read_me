@@ -1,1 +1,23 @@
+prepare.qsub
+Prepares the input files needed for machine learning data generation.
 
+find_crack_tip.qsub
+Runs find_crack_tip.m for the crack-tip detection stage. 
+
+ref_find_crack_tip.m
+MATLAB code used for crack-tip detection. This script extracts localized domains around the propagating crack front to construct the ML dataset.
+
+predict.qsub
+Runs predict.py for ML prediction tasks.
+
+predict.py
+Python script for the trained Transformer model predicts crack propagation in localized sub-domains.
+
+combine_predict.qsub
+Runs combine_predict.m to combine predicted crack-path segments back into the global domain, reconstructing the full trajectory.
+
+ref_combine_predict.m
+MATLAB code that combines predicted crack-path segments back into the global domain.
+
+file.txt
+Contains the time-step count information.
