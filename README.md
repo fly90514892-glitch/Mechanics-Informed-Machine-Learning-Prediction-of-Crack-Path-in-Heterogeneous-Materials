@@ -46,6 +46,12 @@ pip install -r requirements.txt
 │   ├── FEM/                 # .gen files for MEF90 simulations
 │   └── ML/                  # Binary matrices for ML predictions
 │
+├── results_reproduction/
+│   ├── figure_scripts/      # Scripts to reproduce each figure
+│   │   ├── fig5             # folder includes files to generate figure 5
+│   │   ├── fig5
+│   │   ├── fig6_porosity_comparison.py
+│
 ├── requirements.txt         # Python dependencies
 └── LICENSE                  # MIT License
 ```
@@ -75,7 +81,7 @@ The **Variable Stiffness Boundary Condition (VSBC)** [https://doi.org/10.1016/j.
 cd results_reproduction/figure_scripts/
 
 # Figure 5: Hyperparameter optimization
-python fig5_hyperparameter_tuning.py
+cd 
 
 # Figure 6: Crack paths at different porosities (0-5%)
 python fig6_porosity_comparison.py --model ../../Trained_Model/transformer_model_631cases/
