@@ -47,10 +47,6 @@ pip install -r requirements.txt
 │   └── ML/                  # Binary matrices for ML predictions
 │
 ├── results_reproduction/    # Scripts to reproduce each figure
-│   ├── fig5                 # folder includes files to generate figure 5
-│   ├── 
-│   │   ├── fig5
-│   │   ├── fig6_porosity_comparison.py
 │
 ├── requirements.txt         # Python dependencies
 └── LICENSE                  # MIT License
@@ -98,27 +94,49 @@ matlab -batch "run('ml_crack_path.m')"
 cd results_reproduction/fig7
 matlab -batch "run('crack_analysis.m')"
 
-# Figure 8:
+# Figure 8: IoU across different porosity levels
+cd results_reproduction/fig8
+matlab -batch "run('IOU_loop.m')"
 
+# Figure 9: The ML-predicted crack path within a porous medium featuring 5% porosity at different prediction steps
+cd results_reproduction/fig9
+matlab -batch "run('crack_path.m')"
 
-```
+# Figure 10: Predicted crack paths for FE reference, baselines, and ML models
+cd results_reproduction/fig10
+matlab -batch "run('crack_path.m')"
 
-### 4. Validate Results
-```bash
-# Compare ML predictions with FEM ground truth
-python validate_predictions.py --tolerance 0.01
+# Figure 11: IoU metric for baselines and ML models
+cd results_reproduction/fig11
+matlab -batch "run('IOU_loop.m')"
 
-# Expected metrics (Table 1):
-# - Accuracy: 0.9991
-# - F1 Score: 0.9948
-# - IoU: 0.9897
+# Figure 12: Comparison of FE and ML crack paths and corresponding IoU evolution across pore configurations and sizes
+cd results_reproduction/fig12
+matlab -batch "run('fem_crack_path.m')"
+matlab -batch "run('ml_crack_path.m')"
+matlab -batch "run('IOU_loop.m')"
+
+# Figure 13: ML-predicted crack paths in media with 3x3 and 4x4 pores
+cd results_reproduction/fig13/3x3
+matlab -batch "run('ml_crack_path.m')"
+cd results_reproduction/fig13/4x4
+matlab -batch "run('ml_crack_path.m')"
+
+# Figure 14: Comparison of FE and ML crack paths in 10% porous media using datasets of 631 and 7176 cases
+cd results_reproduction/fig14
+matlab -batch "run('ml_crack_path.m')"
+
+# Figure 15: IoU metric for 631 and 7176 cases
+cd results_reproduction/fig15
+matlab -batch "run('IOU_loop.m')"
+
 ```
 
 ## Key Implementation Details
 
 ### Data Generation
 - ROI extraction: 9×4 subdomains around crack tip
-- Binary encoding: 1 = intact material, 0 = crack/pore
+- Binary encoding: 0 = intact material, 1 = crack/pore
 - Train/validation split: 80%/20% at simulation level (not ROI level)
 - Random seed: 42 for all random operations
 
@@ -137,17 +155,6 @@ python validate_predictions.py --tolerance 0.01
 - Memory requirements: 8GB GPU memory for training
 
 ## Citation
-
-If you use this code, please cite:
-```bibtex
-@article{hao2025mechanics,
-  title={Mechanics-Informed Machine Learning Prediction of Crack Path in Heterogeneous Materials},
-  author={Hao, Tengyuan and Hossain, Zubaer},
-  journal={Journal Name},
-  year={2025},
-  doi={10.xxxx/xxxxx}
-}
-```
 
 ## Contact
 
