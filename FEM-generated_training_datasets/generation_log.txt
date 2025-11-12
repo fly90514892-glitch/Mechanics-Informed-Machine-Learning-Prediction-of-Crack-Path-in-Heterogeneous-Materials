@@ -1,0 +1,167 @@
+================================================================================
+DATASET GENERATION LOG - CRACK PROPAGATION IN POROUS MEDIA
+================================================================================
+Manuscript: Mechanics-Informed Machine Learning Prediction of Crack Path 
+            in Heterogeneous Materials
+Authors: Tengyuan Hao, Zubaer Hossain
+Date Generated: 2024-11-12
+================================================================================
+
+GENERAL CONFIGURATION
+================================================================================
+ROI Dimensions: 9 × 4 (elements)
+Available Pore Locations: 35 discrete positions
+Domain Size (FEM): 11 × 6 (elements)
+Initial Crack Length: 2 elements
+Loading Type: Mode I (Uniaxial tension along y-axis)
+Master Random Seed: 42 (used for all stochastic processes)
+
+FEM SIMULATION PARAMETERS
+================================================================================
+Damage Model: AT1 (Ambrosio-Tortorelli type 1)
+Fracture Toughness (Gc): 0.1
+Residual Stiffness (k): 1.0e-6
+Internal Length Scale (ℓ₀): 1.25
+Constitutive Law: Isotropic Hooke's Law
+Young's Modulus (E): 1.0
+Poisson's Ratio (ν): 0.3
+Plasticity Model: NONE
+
+================================================================================
+DATASET 1: BASELINE TRAINING SET (631 CASES)
+================================================================================
+Description: Systematic enumeration of 0, 1, and 2 pore configurations
+Total Cases: 631 (1 + 35 + 595)
+ML Dataset Size: 1262 matrices (input + output pairs)
+Maximum Local Porosity: 5.5% (2 pores in 9×4 ROI)
+
+PORE CONFIGURATION BREAKDOWN
+--------------------------------------------------------------------------------
+Case Type              | Count | Pore Count | Combination Formula
+--------------------------------------------------------------------------------
+No pores              | 1     | 0          | 1
+Single pore           | 35    | 1          | C(35,1) = 35
+Two pores             | 595   | 2          | C(35,2) = 595
+--------------------------------------------------------------------------------
+TOTAL                 | 631   |            |
+
+RANDOM SEED ASSIGNMENTS (DATASET 1)
+--------------------------------------------------------------------------------
+Case ID  | Pore Config | Pore Locations (Row,Col)      | FEM Seed | Status
+--------------------------------------------------------------------------------
+0000     | 0 pores     | None                          | 42       | Complete
+0001     | 1 pore      | (0,0)                         | 43       | Complete
+0002     | 1 pore      | (0,1)                         | 44       | Complete
+0003     | 1 pore      | (0,2)                         | 45       | Complete
+0004     | 1 pore      | (0,3)                         | 46       | Complete
+0005     | 1 pore      | (1,0)                         | 47       | Complete
+0006     | 1 pore      | (1,1)                         | 48       | Complete
+0007     | 1 pore      | (1,2)                         | 49       | Complete
+0008     | 1 pore      | (1,3)                         | 50       | Complete
+0009     | 1 pore      | (2,0)                         | 51       | Complete
+...      | ...         | ...                           | ...      | ...
+0035     | 1 pore      | (8,3)                         | 77       | Complete
+0036     | 2 pores     | (0,0), (0,1)                  | 78       | Complete
+0037     | 2 pores     | (0,0), (0,2)                  | 79       | Complete
+0038     | 2 pores     | (0,0), (0,3)                  | 80       | Complete
+...      | ...         | ...                           | ...      | ...
+0630     | 2 pores     | (8,2), (8,3)                  | 672      | Complete
+--------------------------------------------------------------------------------
+
+SEED GENERATION FORMULA (DATASET 1):
+  FEM_seed[i] = 42 + i, where i ∈ [0, 630]
+
+VALIDATION SPLIT (DATASET 1)
+--------------------------------------------------------------------------------
+Training Set: 80% (505 cases)
+Validation Set: 20% (126 cases)
+Split Method: Simulation-level random split with seed = 42
+No data leakage: All ROIs from same simulation kept together
+
+
+================================================================================
+DATASET 2: EXTENDED TRAINING SET (7176 CASES)
+================================================================================
+Description: Extended dataset including 0, 1, 2, and 3 pore configurations
+Total Cases: 7176 (1 + 35 + 595 + 6545)
+ML Dataset Size: 14352 matrices (input + output pairs)
+Maximum Local Porosity: 8.3% (3 pores in 9×4 ROI)
+
+PORE CONFIGURATION BREAKDOWN
+--------------------------------------------------------------------------------
+Case Type              | Count | Pore Count | Combination Formula
+--------------------------------------------------------------------------------
+No pores              | 1     | 0          | 1
+Single pore           | 35    | 1          | C(35,1) = 35
+Two pores             | 595   | 2          | C(35,2) = 595
+Three pores           | 6545  | 3          | C(35,3) = 6545
+--------------------------------------------------------------------------------
+TOTAL                 | 7176  |            |
+
+RANDOM SEED ASSIGNMENTS (DATASET 2)
+--------------------------------------------------------------------------------
+Case ID  | Pore Config | Pore Locations (Row,Col)      | FEM Seed | Status
+--------------------------------------------------------------------------------
+[Cases 0000-0630: Same as Dataset 1]
+...
+0631     | 3 pores     | (0,0), (0,1), (0,2)          | 673      | Complete
+0632     | 3 pores     | (0,0), (0,1), (0,3)          | 674      | Complete
+0633     | 3 pores     | (0,0), (0,1), (1,0)          | 675      | Complete
+0634     | 3 pores     | (0,0), (0,1), (1,1)          | 676      | Complete
+...      | ...         | ...                           | ...      | ...
+7175     | 3 pores     | (8,1), (8,2), (8,3)          | 7217     | Complete
+--------------------------------------------------------------------------------
+
+SEED GENERATION FORMULA (DATASET 2):
+  FEM_seed[i] = 42 + i, where i ∈ [0, 7175]
+
+VALIDATION SPLIT (DATASET 2)
+--------------------------------------------------------------------------------
+Training Set: 80% (5741 cases)
+Validation Set: 20% (1435 cases)
+Split Method: Simulation-level random split with seed = 42
+No data leakage: All ROIs from same simulation kept together
+
+
+================================================================================
+CROSS-VALIDATION CONFIGURATION (5-FOLD)
+================================================================================
+Applied to: Dataset 1 (631 cases) with optimal hyperparameters
+Random Seed for K-Fold Split: 42
+Fold Assignment Method: Stratified by simulation index
+
+Fold Distribution:
+--------------------------------------------------------------------------------
+Fold | Training Cases | Validation Cases | Validation %
+--------------------------------------------------------------------------------
+1    | 505           | 126              | 20.0%
+2    | 504           | 127              | 20.1%
+3    | 505           | 126              | 20.0%
+4    | 505           | 126              | 20.0%
+5    | 505           | 126              | 20.0%
+--------------------------------------------------------------------------------
+
+
+================================================================================
+MACHINE LEARNING MODEL CONFIGURATION
+================================================================================
+Architecture: Transformer Neural Network
+Framework: TensorFlow/Keras 2.13
+Model Random Seed: 42 (for weight initialization)
+Training Random Seed: 42 (for batch shuffling)
+
+HYPERPARAMETERS (OPTIMIZED)
+--------------------------------------------------------------------------------
+Input Dimensions: 9 × 4 = 36 features (flattened)
+Output Dimensions: 9 × 4 = 36 features (reshaped)
+Number of Attention Heads (num_heads): 8
+Key Dimension (key_dim): 32
+Dense Layer Units: 512
+Dropout Rate: 0.1
+Optimizer: Adam (default learning rate: 0.001)
+Loss Function: Mean Squared Error (MSE)
+Training Epochs: 500
+
+================================================================================
+END OF DATASET GENERATION LOG
+================================================================================
