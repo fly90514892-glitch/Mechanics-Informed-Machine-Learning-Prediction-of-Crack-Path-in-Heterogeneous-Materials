@@ -46,9 +46,9 @@ pip install -r requirements.txt
 │   ├── FEM/                 # .gen files for MEF90 simulations
 │   └── ML/                  # Binary matrices for ML predictions
 │
-├── results_reproduction/
-│   ├── figure_scripts/      # Scripts to reproduce each figure
-│   │   ├── fig5             # folder includes files to generate figure 5
+├── results_reproduction/    # Scripts to reproduce each figure
+│   ├── fig5                 # folder includes files to generate figure 5
+│   ├── 
 │   │   ├── fig5
 │   │   ├── fig6_porosity_comparison.py
 │
@@ -78,17 +78,29 @@ The **Variable Stiffness Boundary Condition (VSBC)** [https://doi.org/10.1016/j.
 
 ## Reproducing Paper Results
 ```bash
-cd results_reproduction/figure_scripts/
 
 # Figure 5: Hyperparameter optimization
-cd 
+cd results_reproduction/fig5/dense
+matlab -batch "run('dense.m')"
+cd results_reproduction/fig5/epoches
+matlab -batch "run('epoches.m')"
+cd results_reproduction/fig5/key_dim
+matlab -batch "run('key_dim.m')"
+cd results_reproduction/fig5/num_heads
+matlab -batch "run('num_heads.m')"
 
 # Figure 6: Crack paths at different porosities (0-5%)
-python fig6_porosity_comparison.py --model ../../Trained_Model/transformer_model_631cases/
+cd results_reproduction/fig6
+matlab -batch "run('fem_crack_path.m')"
+matlab -batch "run('ml_crack_path.m')"
 
-# Figure 14: 10% porosity extrapolation test
-python fig14_extrapolation_test.py --model-631 ../../Trained_Model/transformer_model_631cases/ \
-                                    --model-7176 ../../Trained_Model/transformer_model_7176cases/
+# Figure 7: Tortuosity and the deviation from the centerline as a function of porosity percentage
+cd results_reproduction/fig7
+matlab -batch "run('crack_analysis.m')"
+
+# Figure 8:
+
+
 ```
 
 ### 4. Validate Results
