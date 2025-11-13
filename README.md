@@ -151,7 +151,6 @@ matlab -batch "run('IOU_loop.m')"
 
 ### Performance Benchmarks
 - Training time: ~2 hours (631 cases), ~8 hours (7176 cases) on NVIDIA V100
-- Prediction speed: ~1000× faster than FEM simulations
 - Memory requirements: 8GB GPU memory for training
 
 ## Citation
