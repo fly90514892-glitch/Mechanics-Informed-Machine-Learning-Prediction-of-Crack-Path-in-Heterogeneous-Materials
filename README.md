@@ -59,7 +59,7 @@ The FEM simulations use the following critical parameters (from `dp.yaml`):
 | Parameter | Value | Description |
 |-----------|-------|-------------|
 | `fracturetoughness` | 0.1 | Critical energy release rate (Gc) |
-| `internalLength` | 1.25 | Regularization parameter (ℓ0) |
+| `internalLength` | 0.6 | Regularization parameter (ℓ0) |
 | `YoungsModulus` | 1.0 | Matrix elastic modulus |
 | `residualstiffness` | 1e-6 | Numerical stability parameter (η) |
 | `damage.type` | AT1 | Ambrosio-Tortorelli functional |
